@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>MyWebsite</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	
+	<header>
+		<nav>
+			<div class="row" clearfix>
+				<img src="images/MyLogo.png" class="logo">
+				<ul class="main-nav animated slideInDown" id="check-class">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Sign Up</a></li>
+				</ul> 
+				<a href="#" class="mobile"  onclick="slideshow()"><i class="fa fa-bars"></i></a>
+			</div>
+		</nav>
+
+<div class="main-content-header">
+<h1> WELCOME TO <span class="colorChange">CODING WORLD</span> <br>
+		DEVELOP YOUR SKILLS NOW<span class="dot">....</span></h1>
+		<a href="#" class="btn btn-full">Completed projects</a>
+		<a href="#" class="btn btn-nav">Pending projects</a>
+	</div>
+
+	</header>
+	<div class="container"></div>
+	<script type="text/javascript">
+		function slideshow(){
+			var x=document.getElementById('check-class');   /* this will check if Home, about are not visible then show it*/
+			if (x.style.display==="none") {       
+				x.style.display="block";            /* display*/
+			}else{
+				x.style.display="none";
+			}
+		}
+	</script>
+
+</body>
+</html>
+
+
+

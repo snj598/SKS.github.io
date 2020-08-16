@@ -1,0 +1,221 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	font-size: 20px;
+	overflow-x: hidden;
+}
+/*header{
+	background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-connor-danylenko-2538122.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-origin: center;
+	height: 100vh;
+}*/
+.container{
+	background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-connor-danylenko-2538122.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-origin: center;
+	height: 100vh;
+	transition: 3s;
+
+	animation-name: animation;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+} 
+@keyframes animation{
+	0%{
+		background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-andrea-piacquadio-941572.jpg');
+	}
+	20%{
+		background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-bich-tran-669996.jpg');
+	}
+	40%{
+		background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-freestocksorg-839465.jpg');
+	}
+	60%{
+		background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-startup-stock-photos-7112.jpg');
+	}
+	80%{
+		background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-fox-1595385.jpg');
+	}
+	100%{
+		background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/pexels-connor-danylenko-2538122.jpg');
+	}
+}
+.clearfix:after{
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.row{
+	max-width: 1180px;
+	margin: 0 auto;
+}
+.logo{
+	height: 120px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+.main-nav{
+	float: right;
+	margin-top: 60px;
+}
+.main-nav li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 40px;
+}
+.main-nav li a{
+	padding: 5px 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	font-weight: 100;
+}
+.main-nav li a:hover{               /* this will give animation */
+  border-bottom: 2px solid #00ffff;
+	}
+.main-content-header{                     /*this will bring WELCOME TO CODING WORLD DEVELOP YOUR SKILLS NOW to centre*/
+	width: 1180px;                  /* if we don't use width then it will come perfectly to the centre of webpage. */     
+	color: #fff;
+	position: absolute;
+	top: 55%;                              /*  shift 50%from top*/
+	left: 50%;                              /* shift 50% from left*/
+	transform: translate(-50%,-50%);        /* again shift for perfect alignation*/
+}
+h1{
+	color: #fff;
+	font-size: 240%;
+	word-spacing: 5px;
+	letter-spacing: 3px;
+	margin-bottom: 20px;    /* this will make the space between text and button*/
+	text-transform: uppercase;
+	font-weight: lighter;   /* this will make the text thin*/
+
+}
+
+ .btn{                   /* .btn will apply for both btn btn-full and btn btn-nav */
+	 display: inline-block;
+	 padding: 10px 30px;  /* will move button top left by 10px and top right by 30px*/
+	
+	 text-decoration: none;
+	 text-transform: uppercase;
+	
+	
+	/* transition: background-color 0.2s, border 0.2s, color 0.2s;  /* color will change in 0.2 sec */ 
+	font-family: sans-serif;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b,#03a9f4 );
+ background-size: 400%; /* glow effect*/
+  border-radius: 30px;  /* this will make the button like in oue webpage*/
+
+}
+.btn:hover{
+	animation: animate 8s linear infinite;
+}
+@keyframes animate{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 400%;
+	}
+}
+
+.btn-full{
+
+     color: #fff;
+	margin-right: 15px;
+	 
+
+}
+
+.btn-nav{
+	
+	color: #fff;
+	margin-right: 15px;
+	  
+
+}
+
+
+
+
+.colorChange{
+	animation: codingworldblink 1s infinite;  /* color change in 1s and loop runs infinite*/
+}
+@keyframes codingworldblink{
+	0%{color: red;}
+	25%{color:#bf55ec;}
+	50%{color:#00ffff;}
+	100%{color: #00ff00;}
+}
+.dot{
+	animation: annii 1s infinite;
+}
+@keyframes annii{
+	0%{color: red;}
+	25%{color:#bf55ec;}
+	50%{color:#00ffff;}
+	100%{color: #00ff00;}
+}
+.mobile{
+	display: none; /* initially bar disable*/
+}
+
+/* MAKE IT RESPONSIVE SO IT GET ADJUST ACCORDING TO THE DEVICE*/
+
+@media only screen and (max-width: 1180px){   /* this means when screen width reduced to 1180px then it will adjust accoding to defination part.*/
+	.main-content-header{
+		width: 100%;
+		padding: 0 2%;
+	}
+}
+
+@media only screen and (max-width: 998px){       /* for tablet resolution*/
+		h1{font-size: 200%;}                         /* font size decreased i.e 200% of font size defined in h1 above*/
+	}
+
+@media only screen and (max-width: 768px){      
+		h1{font-size: 180%;}     
+		.main-nav{display: none;}
+		.mobile{
+	display: inline-block;  
+	color: #fff;
+	float: right;                    /* display nav bar at corner*/
+	margin-top: 30px;
+	margin-right: 20px;
+}
+.main-nav{
+	float: left; 
+
+}
+.main-nav li{                      /* this will move About,HOme to the corner at nav bar*/
+	
+	display: block;  /* mean display*/
+	margin-top: 10px;      /* home,about keep gap*/
+}   
+
+	}
+
+
+@media only screen and (max-width: 480px){      /* for mobile*/
+		.btn-full{
+			margin-bottom: 20px;   /* this will make gap between button in mobile resolution*/
+		}
+h1{font-size: 160%;} 
+
+	}
+
